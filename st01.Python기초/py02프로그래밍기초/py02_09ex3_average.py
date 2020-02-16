@@ -14,7 +14,8 @@ if(average >= 95):
 
 else : 
     print(average,"점")
-    print('just good')
+    print('so so')
 
 print('---------------------')
+
 
