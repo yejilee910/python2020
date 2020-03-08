@@ -9,7 +9,7 @@ def genPass():
     password = ""
 
     for i in range(6):
-        index = random.randrange(len(alphabet))
+        index = random.randrange(1, 9)
         password = password + alphabet[index]
     return password
 
