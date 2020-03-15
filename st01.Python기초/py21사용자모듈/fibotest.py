@@ -15,8 +15,9 @@ def main():
 
 
 # 2.함수 import : from 모듈이름 import 모율함수
-fib2(500)
-print(fib2)
+from fibo import * 
+fib(500)
+print(fib)
 # 3. as import
 
 

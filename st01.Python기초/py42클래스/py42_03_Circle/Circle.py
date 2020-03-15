@@ -16,3 +16,17 @@
 
 
 # 코딩 하기 
+
+import math
+
+class Circle(object) : 
+    def __init__(self, radius = 0) : 
+        self.radius = radius 
+    
+    def calcArea(self) : 
+        result = math.pi * self.radius**2 
+        return result
+    
+    def calcCircum(self) : 
+        result = 2* math.pi * self.radius
+        return result

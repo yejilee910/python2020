@@ -28,11 +28,61 @@
 #       서준서  247     61.75
 
 
-# 작업 순서 
+# 작업 순서
 # 딕셔너리를 리턴하는 함수를 선언합니다.
 # 학생을 처리하는 함수를 선언합니다.
 # 학생 리스트를을 선언합니다.
 # 학생을 한 명씩 반복합니다.
 
 
-# 코딩 하기 
+# 코딩 하기
+
+def create_student(name, korean, math, english, science):
+    return {
+        "이름": name,
+        "국어": korean,
+        "수학": math,
+        "영어": english,
+        "과학": science,
+    }
+
+
+def student_get_sum(student):
+    val = student["국어"] + student["수학"] + student["영어"] + student["과학"]
+    return val
+
+
+def student_get_average(student):
+    val = student_get_sum(student)
+    average = val / 4
+    return average
+
+
+def student_to_string(student):
+    sum = student_get_sum(student)
+    avg = student_get_average(student)
+    str = "이름 : %s, 국어 : %s, 수학 : %s, 영어 : %s, 과학 : %s 합계 : %s 평균 : %s" % (
+        student["이름"], student["국어"], student["수학"], student["영어"], student["과학"], sum, avg)
+    return str
+
+
+def main():
+    students = [
+        create_student('윤인성', 87, 98, 88, 95),
+        create_student('연하진', 92, 98, 96, 98),
+        create_student('구지연', 76, 96, 94, 90),
+        create_student('나선주', 98, 92, 96, 92),
+        create_student('윤명월', 64, 88, 92, 92),
+        create_student('윤아린', 95, 98, 98, 98),
+        create_student('김미화', 82, 86, 98, 88),
+        create_student('김연화', 88, 74, 78, 92),
+        create_student('박아현', 97, 92, 88, 95),
+        create_student('서준서', 45, 52, 72, 78),
+    ]
+
+    for student in students:
+        print(student_to_string(student))
+
+
+if __name__ == "__main__":
+    main()

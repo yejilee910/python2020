@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "나눔고딕코딩",
     "files.autoGuessEncoding": true,
-    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3",
+    "python.pythonPath": "/usr/local/bin/python3.8",
     "workbench.view.alwaysShowHeaderActions": true
 }
